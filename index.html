@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#081527">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Accesos rápidos de dirección DEA HABBO ES: web, panel privado, registros, Discord y desarrollo.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DEA Accesos">
+  <meta name="application-name" content="DEA Accesos">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <title>DEA HABBO ES · Centro de enlaces</title>
+  <style>
+    :root{--bg:#060f1d;--panel:#101f35;--panel2:#14263e;--line:#2a455f;--muted:#9fb4cc;--gold:#f0cc83;--cyan:#8bd9ff;--white:#f5f8ff;--green:#96d9b5;--shadow:0 15px 40px rgba(0,0,0,.24)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.45;min-height:100vh}
+    a{color:inherit;text-decoration:none} .icon,.launch{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round} button,input{font:inherit} button{cursor:pointer} .app{position:relative;isolation:isolate;max-width:1100px;margin:0 auto;padding:24px 26px 44px}
+    .app:before{position:absolute;content:"";pointer-events:none;inset:0 -6vw auto;z-index:-2;height:580px;background:radial-gradient(ellipse at 50% 10%,rgba(30,88,146,.32),transparent 62%)}
+    .app:after{position:absolute;content:"";pointer-events:none;z-index:-1;top:95px;right:5%;width:460px;height:460px;max-width:75vw;opacity:.09;background:url('./aguila-dea-original.jpg') center/contain no-repeat;mask-image:linear-gradient(#000,transparent 96%)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:4px 0 30px;border-bottom:1px solid #1e344b}
+    .brand{display:flex;gap:12px;align-items:center;min-width:0}.brand img{width:48px;height:48px;object-fit:contain;border-radius:13px;box-shadow:0 0 18px rgba(60,141,240,.24)}
+    .brand b{font-size:16px;letter-spacing:1.3px;display:block}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:1.8px;text-transform:uppercase;margin-top:1px}
+    .top-right{display:flex;align-items:center;gap:9px}.chip{color:var(--gold);border:1px solid #766346;background:#241f1c;padding:7px 10px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:.8px}
+    .intro{padding:36px 0 18px;max-width:700px}.eyebrow{color:var(--gold);letter-spacing:2.2px;font-size:11px;font-weight:800;text-transform:uppercase}.intro h1{font-size:clamp(30px,5vw,49px);line-height:1.07;margin:10px 0 14px;letter-spacing:-1.4px}.intro h1 span{color:var(--gold)}.intro p{color:#b4c7db;margin:0;font-size:15px;max-width:560px}
+    .utility{display:flex;align-items:center;gap:12px;margin:28px 0 22px}.search{flex:1;position:relative}.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#8da9c5}.search input{width:100%;border:1px solid #335472;border-radius:12px;padding:14px 14px 14px 48px;outline:0;color:var(--white);background:#11233b;font-size:14px}.search input:focus{border-color:#77c7f5;box-shadow:0 0 0 3px rgba(59,160,230,.16)}.search input::placeholder{color:#91a8c1}
+    .count{color:#a9bfd5;font-size:12px;white-space:nowrap}.featured{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:10px 0 31px}
+    .feature{min-width:0;display:flex;flex-direction:column;gap:14px;padding:19px 20px;min-height:142px;border-radius:17px;border:1px solid #315c7d;background:linear-gradient(140deg,#142d49,#0e1b2f);position:relative;overflow:hidden;transition:transform .15s,border-color .15s}.feature:hover,.link:hover{transform:translateY(-2px);border-color:#91d8ff}.feature.gold{border-color:#7b6848;background:linear-gradient(135deg,#30281e,#151f2e)}.feature:after{content:"";position:absolute;width:120px;height:120px;right:-48px;top:-50px;background:radial-gradient(circle,rgba(108,191,249,.11),transparent 65%)}.feature.gold:after{background:radial-gradient(circle,rgba(244,199,103,.17),transparent 65%)}
+    .fi{display:flex;align-items:center;justify-content:space-between;gap:8px}.feature.gold .fi{color:var(--gold)}.feature .icon{width:25px;height:25px;color:var(--cyan)}.feature.gold .icon{color:var(--gold)}.feature .launch{width:17px;color:#a0bdd5}.feature strong{display:block;letter-spacing:.4px;font-size:16px}.feature small{display:block;margin-top:3px;color:#a6bdd4;font-size:12px}
+    section{margin:28px 0 0}.section-head{display:flex;gap:12px;align-items:center;margin:0 0 13px}.section-head h2{font-size:13px;letter-spacing:1.3px;text-transform:uppercase;margin:0;color:#dce9f8}.section-head:before{content:"";height:18px;width:3px;border-radius:2px;background:var(--cyan)}.section-head.gold:before{background:var(--gold)}.section-head small{font-size:11px;color:#7e9bb9;margin-left:auto}
+    .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.link{display:flex;align-items:center;min-width:0;gap:13px;background:#10223a;border:1px solid #29455e;border-radius:13px;padding:15px 14px;transition:transform .15s,border-color .15s}.symbol{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:11px;border:1px solid #375a79;background:#182f4b;color:var(--cyan)}.symbol.gold{border-color:#766448;background:#302a22;color:var(--gold)}.symbol .icon{width:21px;height:21px}.link-main{min-width:0;flex:1}.link strong{display:block;font-size:13px;line-height:1.2}.link small{display:block;color:#93abc4;font-size:11px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.link .launch{color:#7fa5c6;width:17px;height:17px}
+    .note{display:flex;gap:10px;align-items:flex-start;border:1px solid #31435b;border-radius:12px;color:#adc0d7;background:#101c2d;padding:13px 14px;margin:30px 0 13px;font-size:12px}.note svg{flex:none;color:var(--gold)}.foot{padding-top:17px;border-top:1px solid #243a51;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;color:#8399b4;font-size:11px}.foot a{text-decoration:underline;text-underline-offset:3px}.hide{display:none!important}
+    .install{border:1px solid #806942;color:#f2d695;background:#2c291f;padding:9px 11px;border-radius:10px;font-size:12px;display:flex;align-items:center;gap:6px}.install svg{width:15px;height:15px}.install:hover{background:#413526}
+    #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);max-width:90vw;padding:12px 16px;border:1px solid #597c95;border-radius:11px;background:#15324a;color:#fff;font-size:13px;opacity:0;transition:opacity .18s,transform .18s;pointer-events:none;z-index:10}#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+    .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:650px){.app{padding:18px 16px calc(30px + env(safe-area-inset-bottom))}.topbar{padding-bottom:20px}.brand img{width:44px;height:44px}.brand b{font-size:14px;letter-spacing:.7px}.brand small{font-size:9px;letter-spacing:1.1px}.intro{padding:29px 0 9px}.intro h1{font-size:33px}.intro p{font-size:13px}.featured{grid-template-columns:1fr;gap:9px;margin-bottom:26px}.feature{min-height:auto;flex-direction:row;align-items:center;padding:15px;gap:15px}.feature .fi{min-width:29px}.feature .fi .launch{display:none}.feature .copy{flex:1}.feature strong{font-size:14px}.feature small{font-size:11px}.links{grid-template-columns:1fr}.link{padding:12px 13px}.utility{margin-top:21px}.install{font-size:0;width:36px;height:36px;display:grid;place-items:center;padding:0}.install svg{width:18px;height:18px}.foot{display:block;line-height:2}.chip{font-size:9px}.app:after{right:-8%;width:400px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:after,*:before{transition:none!important}}
+
+    /* Iconos identificativos de cada servicio, recuperados de sus propios sitios */
+    .service-mark{width:27px;height:27px;object-fit:contain;display:block;flex:none;filter:drop-shadow(0 1px 5px rgba(255,255,255,.10))}
+    .symbol .service-mark{width:26px;height:26px}
+    .fi .service-mark{width:30px;height:30px}
+    .fi .brand-dea{width:34px;height:34px;border-radius:8px}
+    .symbol.github-brand{background:#f6f8fc;border-color:#d2dae8}
+    .symbol.discord-brand{background:#e7ebff;border-color:#6273e5}
+    .symbol.google-brand{background:#f4f8ff;border-color:#c4d2dd}
+    .brand-fallback{font-size:16px;font-weight:800;color:#e8c780;display:none}
+    .link:hover .symbol{box-shadow:0 0 0 1px rgba(150,205,255,.30)}
+    .brand-note{display:block;font-size:11px;color:#8eaeca;margin-top:3px}
+    .section-head{padding:9px 0 11px;border-bottom:1px solid #345572;margin-bottom:15px}
+    .section-head.gold{border-bottom-color:#6a5b44}
+  </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="0" height="0" style="position:absolute"><defs>
+  <symbol id="external" viewBox="0 0 24 24"><path d="M13 5h6v6m0-6-9 9M19 13v6H5V5h6"/></symbol>
+  <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></symbol>
+  <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18"/></symbol>
+  <symbol id="crown" viewBox="0 0 24 24"><path d="m2 7 5 4 5-7 5 7 5-4-2 12H4L2 7Zm2 12h16"/></symbol>
+  <symbol id="database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></symbol>
+  <symbol id="code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+  <symbol id="discord" viewBox="0 0 24 24"><path d="M5 6c4-2 10-2 14 0l2 12c-3 2-6 3-9 3s-6-1-9-3L5 6Zm2 0L6 4m11 2 1-2M8.5 13h.01m7 0h.01"/></symbol>
+  <symbol id="folder" viewBox="0 0 24 24"><path d="M3 5h7l2 3h9v11H3z"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></symbol>
+  <symbol id="github" viewBox="0 0 24 24"><path d="M9 20c-5 1-5-2-7-3m14 5v-4a4 4 0 0 0-1-3c3 0 6-2 6-6a7 7 0 0 0-2-5c0-2 0-3-1-4-2 0-3 1-4 2a13 13 0 0 0-4 0C9 1 8 0 6 0 5 1 5 2 5 4a7 7 0 0 0-2 5c0 4 3 6 6 6a4 4 0 0 0-1 3v4"/></symbol>
+  <symbol id="key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="5"/><path d="m12 11 8-8 2 2-2 2m-2 0 2 2"/></symbol>
+  <symbol id="book" viewBox="0 0 24 24"><path d="M12 6c-4-3-8-3-10-2v15c4-1 7 0 10 2 3-2 6-3 10-2V4c-2-1-6-1-10 2Zm0 0v15"/></symbol>
+  <symbol id="share" viewBox="0 0 24 24"><path d="M12 3v12m-5-7 5-5 5 5M4 13v8h16v-8"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 6-4 9-9 11-5-2-9-5-9-11V6l9-4Zm-4 10 3 3 5-6"/></symbol>
+</defs></svg>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><img src="./icon-192.png" alt="Escudo oficial de DEA HABBO ES"><div><b>DEA HABBO ES</b><small>Centro de accesos</small></div></div>
+    <div class="top-right"><span class="chip">DEPTO. WEB</span><button class="install" type="button" id="installBtn" aria-label="Cómo instalar esta app" title="Cómo instalar esta app"><svg class="icon" viewBox="0 0 24 24"><use href="#share"/></svg><span>Instalar</span></button></div>
+  </header>
+  <main>
+    <div class="intro"><div class="eyebrow">Panel personal · 10PEDRO</div><h1>Tus herramientas DEA.<br><span>Siempre a mano.</span></h1><p>Abre la web, el Centro VIP, Google y Discord desde un único panel. Servicios agrupados, con iconos identificativos y acceso directo.</p></div>
+    <div class="utility"><label class="search"><span class="sr">Buscar un enlace</span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><use href="#search"/></svg><input id="find" autocomplete="off" placeholder="Buscar acceso, herramienta o servicio…"></label><span class="count" id="counter">10 accesos</span></div>
+    <nav class="featured" aria-label="Accesos principales">
+      <a class="feature gold" href="https://pitersc10.github.io/DEA-habbo-ES/" target="_blank" rel="noopener noreferrer" data-keywords="web oficial habbo dea pagina github principal"><span class="fi"><img class="service-mark brand-dea" alt="Escudo oficial DEA HABBO ES" src="./icon-192.png"><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></span><span class="copy"><strong>WEB OFICIAL</strong><small>DEA HABBO ES · GitHub Pages</small></span></a>
+      <a class="feature" href="https://script.google.com/macros/s/AKfycbyhGqAW8AiwHt11JBT3jmf2In5do2MRpO-H_urxftlewpJgvmWdQV3mrbQQdtOnYndNEg/exec" target="_blank" rel="noopener noreferrer" data-keywords="panel privado vip registros guardado prueba apps script"><span class="fi"><img class="service-mark brand-dea" alt="Escudo oficial DEA HABBO ES" src="./icon-192.png"><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></span><span class="copy"><strong>PANEL PRIVADO DEA</strong><small>Guardado e historial · /exec</small></span></a>
+      <a class="feature" href="https://docs.google.com/spreadsheets/d/1sN0MlUk3lSNVeWl72bu5aAcRc1mu9O4u3sYssdRQdTQ/edit" target="_blank" rel="noopener noreferrer" data-keywords="google sheets base datos central ascensos nominas pagos agentes solicitudes"><span class="fi"><img class="service-mark" loading="lazy" alt="Icono de Google Sheets" referrerpolicy="no-referrer" src="https://ssl.gstatic.com/images/branding/productlogos/sheets_2026/v2/ico/sheets_2026_256dp.ico" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=docs.google.com&amp;sz=128'"><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></span><span class="copy"><strong>BASE DE DATOS</strong><small>Google Sheets · Registros DEA</small></span></a>
+    </nav>
+    <section aria-labelledby="s-gestion"><div class="section-head gold"><h2 id="s-gestion">Gestión y registros</h2><small>Google</small></div><div class="links">
+      <a class="link" href="https://script.google.com/home" target="_blank" rel="noopener noreferrer" data-keywords="google apps script codigo gs proyecto oauth programar"><span class="symbol gold google-brand"><img class="service-mark" loading="lazy" alt="Icono de Google Apps Script" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=script.google.com&amp;sz=128"></span><span class="link-main"><strong>Google Apps Script</strong><small>DEA HABBO ES · Sistema Central</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+      <a class="link" href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer" data-keywords="google drive archivos respaldo copias excel"><span class="symbol google-brand"><img class="service-mark" loading="lazy" alt="Icono de Google Drive" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=drive.google.com&amp;sz=128"></span><span class="link-main"><strong>Drive · Departamento Web</strong><small>Archivos y copias de seguridad</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+      <a class="link" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer" data-keywords="gmail correo deahabbo departamento web"><span class="symbol google-brand"><img class="service-mark" loading="lazy" alt="Icono de Gmail" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=mail.google.com&amp;sz=128"></span><span class="link-main"><strong>Gmail · Cuenta DEA</strong><small>deahabbo.dptweb@gmail.com</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+    </div></section>
+    <section aria-labelledby="s-discord"><div class="section-head"><h2 id="s-discord">Discord y accesos</h2><small>OAuth2</small></div><div class="links">
+      <a class="link" href="https://discord.com/developers/applications/1560923757193986048/oauth2" target="_blank" rel="noopener noreferrer" data-keywords="discord developer oauth2 client id redirect secreto aplicación dea"><span class="symbol gold discord-brand"><img class="service-mark" loading="lazy" alt="Icono de Discord" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=discord.com&amp;sz=128"></span><span class="link-main"><strong>Discord · Aplicación OAuth2</strong><small>Identificación web y redirecciones</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+      <a class="link" href="https://discord.com/developers/applications/1560923757193986048/information" target="_blank" rel="noopener noreferrer" data-keywords="discord portal desarrolladores información general app icono"><span class="symbol discord-brand"><img class="service-mark" loading="lazy" alt="Icono de Discord" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=discord.com&amp;sz=128"></span><span class="link-main"><strong>Developer Portal · DEA</strong><small>Información general de la aplicación</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+      <a class="link" href="https://discord.com/app" target="_blank" rel="noopener noreferrer" data-keywords="discord mensajes servidor miembros 10pedro"><span class="symbol discord-brand"><img class="service-mark" loading="lazy" alt="Icono de Discord" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=discord.com&amp;sz=128"></span><span class="link-main"><strong>Discord · Mi cuenta</strong><small>Servidor DEA y autorizaciones</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+    </div></section>
+    <section aria-labelledby="s-code"><div class="section-head"><h2 id="s-code">Web y código</h2><small>GitHub</small></div><div class="links">
+      <a class="link" href="https://github.com/pitersc10/DEA-habbo-ES" target="_blank" rel="noopener noreferrer" data-keywords="github repositorio código archivos subir index html actualizar página"><span class="symbol github-brand"><img class="service-mark" loading="lazy" alt="Icono de GitHub" referrerpolicy="no-referrer" src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=128"></span><span class="link-main"><strong>Repositorio GitHub</strong><small>pitersc10 / DEA-habbo-ES</small></span><svg class="launch" viewBox="0 0 24 24"><use href="#external"/></svg></a>
+    </div></section>
+    <div id="empty" class="note hide" role="status">No hay enlaces que coincidan con la búsqueda.</div>
+    <aside class="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#shield"/></svg><span><strong>Centro de enlaces, no panel de seguridad.</strong> Los enlaces de esta web pueden ser visibles públicamente en GitHub Pages; Google y Discord deben mantener los permisos de acceso restringidos. No guardes claves ni secretos OAuth aquí. La versión `/exec` del panel puede no incluir los últimos cambios de prueba.</span></aside>
+  </main>
+  <footer class="foot"><span>DEA HABBO ES · App de accesos · 10PEDRO</span><span>Desarrollo visual: <a href="https://yourdesigngpt.netlify.app/" target="_blank" rel="noopener noreferrer">YourDesignGPT</a></span></footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+  const search=document.getElementById('find');const items=[...document.querySelectorAll('[data-keywords]')];const empty=document.getElementById('empty');const counter=document.getElementById('counter');
+  function normalize(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+  search.addEventListener('input',()=>{const q=normalize(search.value.trim());let count=0;items.forEach(a=>{const show=normalize(a.textContent+' '+a.dataset.keywords).includes(q);a.classList.toggle('hide',!show);if(show)count++});document.querySelectorAll('section').forEach(s=>s.classList.toggle('hide',![...s.querySelectorAll('[data-keywords]')].some(a=>!a.classList.contains('hide'))));empty.classList.toggle('hide',count!==0);counter.textContent=`${count} acceso${count===1?'':'s'}`});
+  let deferred;window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferred=event});
+  const toast=document.getElementById('toast');let toastTimer;function message(t){toast.textContent=t;toast.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('on'),3800)}
+  document.getElementById('installBtn').addEventListener('click',async()=>{if(deferred){deferred.prompt();await deferred.userChoice;deferred=null}else if(/iphone|ipad|ipod/i.test(navigator.userAgent)){message('En Safari: Compartir → Añadir a pantalla de inicio')}else{message('En el menú del navegador, elige Instalar aplicación o Añadir a inicio')}});
+  if('serviceWorker' in navigator && location.protocol==='https:')window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body>
+</html>

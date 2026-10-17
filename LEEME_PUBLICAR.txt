@@ -1,0 +1,23 @@
+DEA HABBO ES | ACCESOS · EDICIÓN CON ICONOS OFICIALES
+
+REPOSITORIO RECOMENDADO: DEA-accesos
+DESCRIPCIÓN: Centro de accesos de DEA HABBO ES: web oficial, gestión, Google Sheets, Apps Script, Discord y GitHub. Miniapp instalable para iPhone.
+OWNER: PiterSC10
+VISIBILIDAD: Public (para Pages gratuito)
+README inicial: Off
+.gitignore: No .gitignore
+License: None
+
+1. Crear nuevo repositorio llamado DEA-accesos (NO tocar DEA-habbo-ES).
+2. Extraer este ZIP en el ordenador o en Archivos (iPhone).
+3. En GitHub, abrir el nuevo repositorio > Add file > Upload files.
+4. Subir los archivos de este ZIP DIRECTAMENTE a la raíz; no subir la carpeta ni el ZIP.
+5. En Settings > Pages: Build and deployment > Deploy from a branch, main / (root) > Save.
+6. URL esperada si el repositorio se denomina DEA-accesos: https://pitersc10.github.io/DEA-accesos/ (puede tardar en activarse).
+7. Safari iPhone > Compartir > Añadir a pantalla de inicio. Nombre sugerido: DEA Accesos.
+
+IMPORTANTE SOBRE PRIVACIDAD
+Una página pública de GitHub Pages publica el código HTML y los enlaces incluidos en él. Los enlaces a Google Sheets, Apps Script y al panel privado resultan visibles a terceros, aunque la autenticación de Google sigue protegiendo los contenidos mientras esté bien configurada. NO incluir contraseñas, tokens, secretos OAuth ni datos de agentes en este repositorio.
+La app utiliza iconos de los servicios obtenidos online de los favicons públicos de sus respectivos sitios y para Sheets una ruta de imagen de Google. Sin conexión los accesos todavía pueden usarse al volver a estar online; si no carga algún icono, se necesitará conexión para mostrarlo. El escudo DEA se conserva localmente.
+
+Créditos: 10PEDRO · YourDesignGPT · https://yourdesigngpt.netlify.app/
